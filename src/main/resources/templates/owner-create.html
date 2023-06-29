@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Добавление задачи</title>
+</head>
+<body>
+<form action="#" th:action="@{/owner-create}" th:object="${owner}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="project">Название проекта</label>
+    <input type="text" th:field="*{project}" id="project" placeholder="Введите проект">
+    <br/>
+    <label for="responsible">Ответсвенное лицо</label>
+    <input type="text" th:field="*{responsible}" id="responsible" placeholder="Введите ФИО">
+    <br/>
+    <input type="submit" value="Добавить задачу">
+</form>
+<p><a href="/owner">Вернуться назад</a></p>
+</body>
+</html>

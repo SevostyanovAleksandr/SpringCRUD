@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create user</title>
+</head>
+<body>
+<form action="#" th:action="@{/user-update}" th:object="${user}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="username">ФИО</label>
+    <input type="text" th:field="*{username}" id="username" placeholder="Пользователь">
+    <br/>
+    <label for="password">Пароль</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="Пароль">
+    <label for="email">Почта</label>
+    <input type="text" th:field="*{email}" id="email" placeholder="Почта">
+    <br/>
+    <input type="submit" value="Обновить">
+</form>
+</body>
+</html>

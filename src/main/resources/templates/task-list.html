@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tasklist.css">
+    <title>Текущее задачи</title>
+</head>
+<body>
+<div th:switch="${task}">
+    <h2 th:case="null">No users found!</h2>
+    <div th:case="*">
+        <h2>Задачи</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Дата задачи</th>
+                <th>Описание задачи</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="task : ${task}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.task_date}"></td>
+                <td th:text="${task.title}"></td>
+                <td><a th:href="@{task-update/{id}(id=${task.id})}">Обновить</a></td>
+                <td><a th:href="@{task-delete/{id}(id=${task.id})}">Удалить</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/task-create">Добавить задание</a></p>
+    <p><a href="/owner">Текущее проекты</a></p>
+    <p><a href="/users">Текущее сотрудники</a></p>
+</div>
+</body>
+</html>

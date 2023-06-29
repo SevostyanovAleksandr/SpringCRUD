@@ -2,20 +2,21 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Сотрудники</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
 <div th:switch="${users}">
     <h2 th:case="null">No users found!</h2>
     <div th:case="*">
-        <h2>Users</h2>
+        <h2>Сотрудники</h2>
         <table>
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Password</th>
+                <th>ФИО</th>
+                <th>Почта</th>
+                <th>Номер телефона</th>
             </tr>
             </thead>
             <tbody>
@@ -30,7 +31,9 @@
             </tbody>
         </table>
     </div>
-    <p><a href="/user-create">Добавить пользователя</a></p>
+    <p><a href="/user-create">Добавить cотрудника</a></p>
+    <p><a href="/task">Текущее задания</a></p>
+    <p><a href="/owner">Текущее проекты</a></p>
 </div>
 </body>
 </html>

@@ -4,17 +4,20 @@ import com.example.CRUD.model.User;
 import com.example.CRUD.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 
 // бизнес логика
 // некий запрос который мы будем принимать из внешнего мира
-@Service//
+@Service
 
 public class UserSevice {
+
+    private final UserRepository userRepository;
     @Autowired
-    private UserRepository userRepository;
+    public UserSevice(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public User findById(Long id) {
         return userRepository.getOne(id);

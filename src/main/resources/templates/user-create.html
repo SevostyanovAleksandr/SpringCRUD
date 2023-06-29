@@ -2,17 +2,19 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Create user</title>
+    <title>Добавление сотрудника</title>
+    <link rel="stylesheet" type="text/css" href="styles/usercreate.css" />
 </head>
 <body>
 <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
-    <label for="username">Имя пользователя</label>
-    <input type="text" th:field="*{username}" id="username" placeholder="имя пользователя">
-    <label for="password">Пароль</label>
-    <input type="text" th:field="*{password}" id="password" placeholder="Пароль">
+    <label for="username">ФИО</label>
+    <input type="text" th:field="*{username}" id="username" placeholder="ФИО">
+    <label for="password">Номер телефона</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="Номер телефона">
     <label for="email">Почта</label>
     <input type="text" th:field="*{email}" id="email" placeholder="Почта">
-    <input type="submit" value="Добавить пользователя">
+    <input type="submit" value="Добавить">
 </form>
+<p><a href="/users">Вернуться назад</a></p>
 </body>
 </html>

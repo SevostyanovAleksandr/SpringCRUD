@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tasklist.css">
+    <title>Текущее проекты</title>
+</head>
+<body>
+<div th:switch="${owner}">
+    <h2 th:case="null">No users found!</h2>
+    <div th:case="*">
+        <h2>Проекты</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Название проекта</th>
+                <th>Отвесвенное лицо</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="owner : ${owner}">
+                <td th:text="${owner.id}"></td>
+                <td th:text="${owner.project}"></td>
+                <td th:text="${owner.responsible}"></td>
+                <td><a th:href="@{owner-update/{id}(id=${owner.id})}">Обновить</a></td>
+                <td><a th:href="@{owner-delete/{id}(id=${owner.id})}">Удалить</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/owner-create">Добавить проект</a></p>
+    <p><a href="/users">Текущее сотрудники </a></p>
+    <p><a href="/task">Текущее задания</a></p>
+</div>
+</body>
+</html>

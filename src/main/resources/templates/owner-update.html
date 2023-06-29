@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Проекты</title>
+</head>
+<body>
+<form action="#" th:action="@{/owner-update}" th:object="${owner}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="project">Название проекта</label>
+    <input type="text" th:field="*{project}" id="project" placeholder="Введите проект">
+    <br/>
+    <label for="title">Ответсвенное лицо</label>
+    <input type="text" th:field="*{responsible}" id="title" placeholder="Введите ФИО">
+    <br/>
+    <input type="submit" value="Обновить">
+</form>
+</body>
+</html>

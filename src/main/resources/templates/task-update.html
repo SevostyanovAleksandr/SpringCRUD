@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Задачи</title>
+</head>
+<body>
+<form action="#" th:action="@{/task-update}" th:object="${task}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="task_date">Дата задания</label>
+    <input type="text" th:field="*{task_date}" id="task_date" placeholder="Введите задание">
+    <br/>
+    <label for="title">Описание</label>
+    <input type="text" th:field="*{title}" id="title" placeholder="Введите описание">
+    <br/>
+    <input type="submit" value="Обновить">
+</form>
+</body>
+</html>
