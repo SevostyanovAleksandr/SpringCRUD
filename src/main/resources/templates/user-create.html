@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Добавление сотрудника</title>
+    <link rel="stylesheet" th:href="@{userlist.css}" />
     <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{usercreate.css}" />
-
 </head>
 <body>
-<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+<div>
+    <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
     <label for="username">ФИО</label>
     <input type="text" th:field="*{username}" id="username" placeholder="ФИО">
     <label for="password">Номер телефона</label>
     <input type="text" th:field="*{password}" id="password" placeholder="Номер телефона">
     <label for="email">Почта</label>
     <input type="text" th:field="*{email}" id="email" placeholder="Почта">
-    <input type="submit" value="Добавить">
+    <input type="submit" class="button" value="Добавить">
 </form>
 <p><a href="/users" class="button">Вернуться назад</a></p>
+</div>
 </body>
 </html>

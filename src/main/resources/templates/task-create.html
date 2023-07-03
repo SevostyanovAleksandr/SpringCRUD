@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
-<link rel="stylesheet" th:href="@{usercreate.css}" />
+    <link rel="stylesheet" th:href="@{userlist.css}" />
 <meta charset="UTF-8">
 <title>Добавление задачи</title>
 </head>
@@ -10,13 +10,10 @@
 <form action="#" th:action="@{/task-create}" th:object="${task}" method="post">
     <label for="id">ID</label>
     <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
-    <br/>
     <label for="task_date">Дата задачи</label>
     <input type="text" th:field="*{task_date}" id="task_date" placeholder="Введите дату">
-    <br/>
     <label for="title">Описание задачи</label>
     <input type="text" th:field="*{title}" id="title" placeholder="Введите описание">
-    <br/>
     <input type="submit" value="Добавить задачу">
 </form>
 <p><a href="/task" class="button">Вернуться назад</a></p>

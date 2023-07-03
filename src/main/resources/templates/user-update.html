@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
+    <meta charset="UTF-8">
+    <title>Обновление</title>
+    <link rel="stylesheet" th:href="@{userlist.css}" />
     <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<title>Обновление записи</title>
 </head>
 <body>
 <form action="#" th:action="@{/user-update}" th:object="${user}" method="post">
     <label for="id">ID</label>
     <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
-    <br/>
     <label for="username">ФИО</label>
     <input type="text" th:field="*{username}" id="username" placeholder="Пользователь">
-    <br/>
     <label for="password">Пароль</label>
     <input type="text" th:field="*{password}" id="password" placeholder="Пароль">
     <label for="email">Почта</label>
     <input type="text" th:field="*{email}" id="email" placeholder="Почта">
-    <br/>
     <input type="submit" class="button" value="Обновить">
 </form>
+<p><a href="/users" class="button">Вернуться назад</a></p>
 </body>
 </html>

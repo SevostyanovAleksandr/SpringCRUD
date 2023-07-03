@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
-<link rel="stylesheet" th:href="@{usercreate.css}" />
+    <link rel="stylesheet" th:href="@{userlist.css}" />
 <meta charset="UTF-8">
 <title>Добавление задачи</title>
 </head>
@@ -10,14 +10,11 @@
 <form action="#" th:action="@{/owner-create}" th:object="${owner}" method="post">
     <label for="id">ID</label>
     <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
-    <br/>
     <label for="project">Название проекта</label>
     <input type="text" th:field="*{project}" id="project" placeholder="Введите проект">
-    <br/>
     <label for="responsible">Ответсвенное лицо</label>
     <input type="text" th:field="*{responsible}" id="responsible" placeholder="Введите ФИО">
-    <br/>
-    <input type="submit"class="button" value="Добавить задачу">
+    <input type="submit" class="button" value="Добавить задачу">
 </form>
 <p><a href="/owner" class="button">Вернуться назад</a></p>
 </body>

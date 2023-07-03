@@ -34,13 +34,7 @@ input[type="text"] {
 input[type="submit"] {
     background-color: #1D3E5F;
     color: #FFF;
-    cursor: pointer;
-}
 
-.button {
-    background-color: #1D3E5F;
-    color: #FFF;
-    text-decoration: none;
 }
 
 .button:hover {

@@ -29,13 +29,13 @@ font-family: 'Montserrat', sans-serif;
 
 a {
 font-family: 'Montserrat', sans-serif;
-    color: #00c;
+    color: 8a5286;
 }
 
 a.button {
 font-family: 'Montserrat', sans-serif;
-    background-color: #00c;
-    color: #fff;
+    background-color:#8A5286;
+    color: #8a5286;
     padding: 40px 40px;
     text-decoration: none;
     display: inline-block;
@@ -47,7 +47,37 @@ font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
 
+label {
+    display: block;
+    font-weight: bold
+    margin-top: 10px;
+}
 
+input[type="number"],
+input[type="text"],
+input[type="submit"],
+.button {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
+input[type="number"],
+input[type="text"] {
+    background-color: #1D3E5F;
+    color: #FFF;
+}
+
+input[type="submit"] {
+    background-color: #1D3E5F;
+    color: #FFF;
+
+}
+
+.button:hover {
+    background-color: #8A5286;
+}
 /* Add additional styles here */
 
