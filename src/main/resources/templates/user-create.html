@@ -9,6 +9,7 @@
 </head>
 <body>
 <div>
+    <h2>Добавление сотрудника</h2>
     <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
     <label for="username">ФИО</label>
     <input type="text" th:field="*{username}" id="username" placeholder="ФИО">

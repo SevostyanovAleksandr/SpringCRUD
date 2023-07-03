@@ -1,42 +1,57 @@
 
 /* Create or modify CSS classes for dark theme */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100;1,300&display=swap');
+
+form{
+margin-top: 90px ;
+}
+
 head {
+ font-size: 20px;
 font-family: 'Montserrat', sans-serif;
  font-weight: bold;
 }
 body {
+ font-size: 20px;
 font-family: 'Montserrat', sans-serif;
     background-color: #1e1e1e;
     color: #fff;
 }
 
 h2 {
+ font-size: 37px;
 font-family: 'Montserrat', sans-serif;
     color: #fff;
+    margin-left: 30px;
 }
 
 table {
+ font-size: 20px;
 font-family: 'Montserrat', sans-serif;
     background-color: #222;
     color: #fff;
 }
-
+form {
+margin-bottom:30px;
+}
 th, td {
+ font-size: 20px;
 font-family: 'Montserrat', sans-serif;
     border: 1px solid #000;
 }
 
 a {
+ font-size: 20px;
 font-family: 'Montserrat', sans-serif;
-    color: 8a5286;
+    color: #00c;
 }
 
 a.button {
+ font-size: 20px;
 font-family: 'Montserrat', sans-serif;
-    background-color:#8A5286;
-    color: #8a5286;
-    padding: 40px 40px;
+    background-color: #8a5286;
+    color: #fff;
+    padding: 15px 30px;
     text-decoration: none;
     display: inline-block;
 }
@@ -47,17 +62,10 @@ font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
 
-label {
-    display: block;
-    font-weight: bold
-    margin-top: 10px;
-}
-
 input[type="number"],
 input[type="text"],
 input[type="submit"],
 .button {
-    width: 100%;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -66,18 +74,28 @@ input[type="submit"],
 
 input[type="number"],
 input[type="text"] {
-    background-color: #1D3E5F;
+    background-color: #ecdfeb;
     color: #FFF;
 }
 
 input[type="submit"] {
-    background-color: #1D3E5F;
-    color: #FFF;
+    background-color:#8a5286;
+    color: #fff;
+    margin-left: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
 
 }
 
 .button:hover {
-    background-color: #8A5286;
+    background-color: #4b2c48;
+    border-radius: 12px;
+
+
 }
+
+
 /* Add additional styles here */
 
