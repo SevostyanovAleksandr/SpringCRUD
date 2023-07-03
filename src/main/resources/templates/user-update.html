@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Create user</title>
+<title>Обновление записи</title>
 </head>
 <body>
 <form action="#" th:action="@{/user-update}" th:object="${user}" method="post">
@@ -20,7 +18,7 @@
     <label for="email">Почта</label>
     <input type="text" th:field="*{email}" id="email" placeholder="Почта">
     <br/>
-    <input type="submit" value="Обновить">
+    <input type="submit" class="button" value="Обновить">
 </form>
 </body>
 </html>

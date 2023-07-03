@@ -1,31 +1,42 @@
 
 /* Create or modify CSS classes for dark theme */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100;1,300&display=swap');
+head {
+font-family: 'Montserrat', sans-serif;
+ font-weight: bold;
+}
 body {
+font-family: 'Montserrat', sans-serif;
     background-color: #1e1e1e;
     color: #fff;
 }
 
 h2 {
+font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
 
 table {
+font-family: 'Montserrat', sans-serif;
     background-color: #222;
     color: #fff;
 }
 
 th, td {
+font-family: 'Montserrat', sans-serif;
     border: 1px solid #000;
 }
 
 a {
+font-family: 'Montserrat', sans-serif;
     color: #00c;
 }
 
 a.button {
+font-family: 'Montserrat', sans-serif;
     background-color: #00c;
     color: #fff;
-    padding: 10px 20px;
+    padding: 40px 40px;
     text-decoration: none;
     display: inline-block;
 }
@@ -35,6 +46,8 @@ a.button {
     background-color: #1e1e1e;
     color: #fff;
 }
+
+
 
 /* Add additional styles here */
 

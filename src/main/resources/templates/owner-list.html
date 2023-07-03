@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css.map"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-          crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{userlist.css}" />>
+    <link rel="stylesheet" th:href="@{userlist.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
     <title>Текущее проекты</title>
 </head>
 <body>
@@ -14,6 +12,14 @@
     <h2 th:case="null">No users found!</h2>
     <div th:case="*">
         <h2>Проекты</h2>
+        <table>
+            <tbody>
+            <tr>
+                <td><p><a class="button" href="/task">Текущее задания</a></p></td>
+                <td>  <p><a class="button" href="/users">Текущее сотрудники</a></p></td>
+            </tr>
+            </tbody>
+        </table>
         <table>
             <thead>
             <tr>
@@ -27,15 +33,14 @@
                 <td th:text="${owner.id}"></td>
                 <td th:text="${owner.project}"></td>
                 <td th:text="${owner.responsible}"></td>
-                <td><a th:href="@{owner-update/{id}(id=${owner.id})}">Обновить</a></td>
-                <td><a th:href="@{owner-delete/{id}(id=${owner.id})}">Удалить</a></td>
+                <td><a th:href="@{owner-update/{id}(id=${owner.id})}"class="button">Обновить</a></td>
+                <td><a th:href="@{owner-delete/{id}(id=${owner.id})}"class="button">Удалить</a></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <p><a href="/owner-create">Добавить проект</a></p>
-    <p><a href="/users">Текущее сотрудники </a></p>
-    <p><a href="/task">Текущее задания</a></p>
+    <p><a href="/owner-create"class="button">Добавить проект</a></p>
+
 </div>
 </body>
 </html>

@@ -3,17 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{userlist.css}" />
     <title>Сотрудники</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-          crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/userlist.css}" />
 </head>
 <body>
 <div th:switch="${users}">
     <h2 th:case="null">No users found!</h2>
     <div th:case="*">
         <h2>Сотрудники</h2>
+        <table>
+            <tbody>
+            <tr>
+                <td><p><a class="button" href="/owner">Текущее проекты</a></p></td>
+                <td>  <p><a class="button" href="/task">Текущее задания</a></p></td>
+            </tr>
+            </tbody>
+        </table>
         <table>
             <thead>
             <tr>
@@ -29,16 +37,14 @@
                 <td th:text="${user.username}"></td>
                 <td th:text="${user.email}"></td>
                 <td th:text="${user.password}"></td>
-                <td><a th:href="@{user-update/{id}(id=${user.id})}">Обновить</a></td>
-                <td><a th:href="@{user-delete/{id}(id=${user.id})}">Удалить</a></td>
+                <td><a th:href="@{user-update/{id}(id=${user.id})}"class="button">Обновить</a></td>
+                <td><a th:href="@{user-delete/{id}(id=${user.id})}"class="button">Удалить</a></td>
             </tr>
             </tbody>
         </table>
     </div>
 
     <p><a href="/user-create" class="button">Добавить сотрудника</a></p>
-    <p><a href="/task">Текущее задания</a></p>
-    <p><a href="/owner">Текущее проекты</a></p>
 </div>
 </body>
 </html>
