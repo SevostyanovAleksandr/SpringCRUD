@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -33,9 +34,9 @@ public class TaskController {
         return "task-create";
     }
 
-    @PostMapping("/task-create")
-    public String createTask(Task task) {
-        taskService.saveTask(task);
+    @PostMapping(value = "/task-create")
+    public String createTask( Task task) {
+        taskService.saveTask((task));
         return "redirect:/task";
     }
 

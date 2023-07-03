@@ -10,7 +10,6 @@ import java.util.List;
 // бизнес логика
 // некий запрос который мы будем принимать из внешнего мира
 @Service
-
 public class UserSevice {
 
     private final UserRepository userRepository;
@@ -19,6 +18,8 @@ public class UserSevice {
         this.userRepository = userRepository;
     }
 
+    //@SuppressWarnings("deprecation")//подавление старого метода
+    @SuppressWarnings("deprecation")
     public User findById(Long id) {
         return userRepository.getOne(id);
     }

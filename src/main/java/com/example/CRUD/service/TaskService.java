@@ -3,6 +3,7 @@ package com.example.CRUD.service;
 import com.example.CRUD.model.Task;
 import com.example.CRUD.model.User;
 import com.example.CRUD.repository.TaskRepisitory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class TaskService {
     private final TaskRepisitory taskRepisitory;
-
+@Autowired
     public TaskService(TaskRepisitory taskRepisitory) {
         this.taskRepisitory = taskRepisitory;
     }

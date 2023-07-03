@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Сотрудники</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/userlist.css}" />
 </head>
 <body>
 <div th:switch="${users}">
@@ -22,16 +26,17 @@
             <tbody>
             <tr th:each="user : ${users}">
                 <td th:text="${user.id}"></td>
-                <td th:text="${user.Username}"></td>
-                <td th:text="${user.Email}"></td>
-                <td th:text="${user.Password}"></td>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.password}"></td>
                 <td><a th:href="@{user-update/{id}(id=${user.id})}">Обновить</a></td>
                 <td><a th:href="@{user-delete/{id}(id=${user.id})}">Удалить</a></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <p><a href="/user-create">Добавить cотрудника</a></p>
+
+    <p><a href="/user-create" class="button">Добавить сотрудника</a></p>
     <p><a href="/task">Текущее задания</a></p>
     <p><a href="/owner">Текущее проекты</a></p>
 </div>

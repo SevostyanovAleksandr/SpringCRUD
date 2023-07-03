@@ -1,0 +1,40 @@
+
+/* Create or modify CSS classes for dark theme */
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+}
+
+table {
+    background-color: #222;
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid #000;
+}
+
+a {
+    color: #00c;
+}
+
+a.button {
+    background-color: #00c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Add the class to body element */
+.dark-theme {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* Add additional styles here */
+
